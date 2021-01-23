@@ -12,22 +12,37 @@ body {
     overflow: hidden;
     background-repeat: inherit;
     border-radius: 4px;
-    padding: 5px;
     width: 150px;
 }
 
 .window {
-    width: 400px;
-    max-width: 100%;
-    min-height: 500px;
+    width: 80%;
+    height: 80%;
+    min-height: 700px;
+    min-width: 450px;
+    max-width: 700px;
     margin: 20px auto;
-    background-color: #ffffff; 
-    background-image: linear-gradient(#1c88b3 0%, #25d167 100%);
     border-radius: 2px;
     overflow: hidden;
     position: relative;
-    padding: 30px;
+    padding: 20px;
     border: 3px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .window h2 {
@@ -36,7 +51,8 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    text-align: center;
+    font-size: 40px;
 }
 
 .choice2 {
@@ -44,27 +60,38 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
-.rock {
-    border-radius: 80%;
-    padding: 5px;
-    width: 20%;
-    border: 1px solid rgb(255, 255, 255);
-    margin-left: auto;
-    margin-right: auto;
+.rock, .rok {
+    border-radius: 90%;
+    padding: 10px;
+    min-width: 30px;
+    max-width: 90px;
+    cursor: pointer;
 }
 
-.paper {
+.paper, .pap {
     border-radius: 80%;
     padding: 5px;
-    width: 23%;
-    border: 1px solid rgb(255, 255, 255);
+    min-width: 40px;
+    max-width: 100px;
+    cursor: pointer;
 }
 
-.scissors {
+.scissors, .sci {
     border-radius: 80%;
     padding: 5px;
-    width: 23%;
-    border: 1px solid rgb(255, 255, 255);
+    min-width: 40px;
+    max-width: 100px;
+    cursor: pointer;
+}
+
+.window p {
+    font-size: 20px;
+}
+.window h3 {
+    font-size: 35px;
+    text-align: center;
+    padding-top: 30px;
 }
